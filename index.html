@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Внутренний корпоративный портал</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+
+<div id="portal" class="portal"></div>
+
+<div id="login" class="login-page">
+    <div class="login-box">
+        <h1>Корпоративный портал</h1>
+        <p>Вход для сотрудников организации</p>
+
+        <input type="text" placeholder="Логин">
+        <input type="password" placeholder="Пароль">
+
+        <a href="#portal" class="login-btn">Войти</a>
+
+        <p class="login-note">
+            Доступ предоставляется только авторизованным сотрудникам
+        </p>
+    </div>
+</div>
+
+
+
+
+
+    <header class="hero">
+        <div class="container hero-content">
+            <h1>Внутренний корпоративный сайт</h1>
+            <p>
+                Единая информационная система для сотрудников организации,
+                предназначенная для эффективного взаимодействия и управления
+                рабочими процессами.
+            </p>
+        </div>
+    </header>
+
+    <section class="section about">
+        <div class="container">
+            <h2>О проекте</h2>
+            <p>
+                Внутренний корпоративный сайт представляет собой централизованный
+                веб-ресурс, используемый сотрудниками организации для получения
+                актуальной информации, доступа к документам и взаимодействия
+                между подразделениями.
+            </p>
+            <p>
+                Разработка данного портала направлена на повышение эффективности
+                внутренних бизнес-процессов, снижение нагрузки на электронную почту
+                и упрощение коммуникации внутри компании.
+            </p>
+        </div>
+    </section>
+
+
+    <section class="section features">
+        <div class="container">
+            <h2>Основные функции портала</h2>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Новости компании</h3>
+                    <p>
+                        Публикация официальных объявлений, изменений в регламентах,
+                        корпоративных событий и новостей.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Документооборот</h3>
+                    <p>
+                        Централизованное хранение внутренних документов,
+                        инструкций и нормативных актов.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Личный кабинет</h3>
+                    <p>
+                        Персональная информация сотрудника, текущие задачи
+                        и уведомления.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Система заявок</h3>
+                    <p>
+                        Отправка обращений в IT-отдел, отдел кадров
+                        и администрацию.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section dashboard">
+        <div class="container">
+            <h2>Рабочий кабинет сотрудника</h2>
+
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <h3>Профиль</h3>
+                    <p><strong>ФИО:</strong> Иванов Иван Иванович</p>
+                    <p><strong>Должность:</strong> Программист</p>
+                    <p><strong>Отдел:</strong> IT-отдел</p>
+                </div>
+
+                <div class="dashboard-card">
+                    <h3>Текущие задачи</h3>
+                    <ul>
+                        <li>Обновление корпоративного сайта</li>
+                        <li>Подготовка отчета</li>
+                        <li>Участие в совещании</li>
+                    </ul>
+                </div>
+
+                <div class="dashboard-card">
+                    <h3>Уведомления</h3>
+                    <p>• Обновлен регламент компании</p>
+                    <p>• Назначено собрание на 15.04</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section documents">
+        <div class="container">
+            <h2>Внутренние документы</h2>
+
+            <div class="docs-list">
+                <button onclick="showDoc('doc1')">Регламент компании</button>
+                <button onclick="showDoc('doc2')">Должностные инструкции</button>
+                <button onclick="showDoc('doc3')">Политика безопасности</button>
+            </div>
+
+            <div id="doc1" class="doc-content">
+                <h3>Регламент компании</h3>
+                <p>
+                    Документ определяет правила внутреннего распорядка,
+                    рабочее время и обязанности сотрудников.
+                </p>
+            </div>
+
+            <div id="doc2" class="doc-content">
+                <h3>Должностные инструкции</h3>
+                <p>
+                    Описывает обязанности, права и ответственность
+                    сотрудников организации.
+                </p>
+            </div>
+
+            <div id="doc3" class="doc-content">
+                <h3>Политика безопасности</h3>
+                <p>
+                    Регламентирует правила работы с корпоративной
+                    информацией и защиту данных.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section requests">
+        <div class="container">
+            <h2>Система внутренних заявок</h2>
+
+            <form class="request-form">
+                <input type="text" placeholder="ФИО сотрудника">
+                <select>
+                    <option>IT-поддержка</option>
+                    <option>Отдел кадров</option>
+                    <option>Администрация</option>
+                </select>
+                <textarea placeholder="Описание заявки"></textarea>
+                <button type="button">Отправить заявку</button>
+            </form>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Внутренний корпоративный сайт организации</p>
+        </div>
+    </footer>
+
+
+<script>
+function showDoc(id) {
+    document.querySelectorAll('.doc-content')
+        .forEach(d => d.style.display = 'none');
+    document.getElementById(id).style.display = 'block';
+}
+</script>
+
+</body>
+</html>
