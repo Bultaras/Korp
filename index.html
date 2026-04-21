@@ -1,206 +1,273 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Внутренний корпоративный портал</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Корпоративный портал | Внутренняя система</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-
-<div id="portal" class="portal"></div>
-
-<div id="login" class="login-page">
-    <div class="login-box">
-        <h1>Корпоративный портал</h1>
-        <p>Вход для сотрудников организации</p>
-
-        <input type="text" placeholder="Логин">
-        <input type="password" placeholder="Пароль">
-
-        <a href="#portal" class="login-btn">Войти</a>
-
-        <p class="login-note">
-            Доступ предоставляется только авторизованным сотрудникам
-        </p>
+  <div id="login-screen" class="login-screen">
+    <div class="login-card">
+      <h1>Вход в систему</h1>
+      <p>Авторизованный доступ к внутренним ресурсам</p>
+      <form class="auth-form">
+        <input type="text" placeholder="Корпоративный логин" required>
+        <input type="password" placeholder="Пароль" required>
+        <button type="submit" class="btn-primary">Войти</button>
+      </form>
+      <span class="login-hint">Тестовый доступ: любой логин и пароль</span>
     </div>
-</div>
+  </div>
 
-
-
-
-
-    <header class="hero">
-        <div class="container hero-content">
-            <h1>Внутренний корпоративный сайт</h1>
-            <p>
-                Единая информационная система для сотрудников организации,
-                предназначенная для эффективного взаимодействия и управления
-                рабочими процессами.
-            </p>
-        </div>
+  <div id="portal" class="portal hidden">
+    <header class="main-header">
+      <div class="container header-wrap">
+        <div class="brand">CorpPortal</div>
+        <nav class="main-nav">
+          <a href="#about">О системе</a>
+          <a href="#features">Возможности</a>
+          <a href="#dashboard">Кабинет</a>
+          <a href="#requests">Заявки</a>
+        </nav>
+      </div>
     </header>
 
-    <section class="section about">
+    <main>
+      <section class="hero">
         <div class="container">
-            <h2>О проекте</h2>
-            <p>
-                Внутренний корпоративный сайт представляет собой централизованный
-                веб-ресурс, используемый сотрудниками организации для получения
-                актуальной информации, доступа к документам и взаимодействия
-                между подразделениями.
-            </p>
-            <p>
-                Разработка данного портала направлена на повышение эффективности
-                внутренних бизнес-процессов, снижение нагрузки на электронную почту
-                и упрощение коммуникации внутри компании.
-            </p>
+          <h1>Единое цифровое рабочее пространство</h1>
+          <p>Автоматизация документооборота, управление задачами и оперативная коммуникация для всех подразделений организации.</p>
         </div>
-    </section>
+      </section>
 
-
-    <section class="section features">
+      <section id="about" class="section">
         <div class="container">
-            <h2>Основные функции портала</h2>
-
-            <div class="features-grid">
-                <div class="feature-card">
-                    <h3>Новости компании</h3>
-                    <p>
-                        Публикация официальных объявлений, изменений в регламентах,
-                        корпоративных событий и новостей.
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <h3>Документооборот</h3>
-                    <p>
-                        Централизованное хранение внутренних документов,
-                        инструкций и нормативных актов.
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <h3>Личный кабинет</h3>
-                    <p>
-                        Персональная информация сотрудника, текущие задачи
-                        и уведомления.
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <h3>Система заявок</h3>
-                    <p>
-                        Отправка обращений в IT-отдел, отдел кадров
-                        и администрацию.
-                    </p>
-                </div>
+          <h2>О системе</h2>
+          <div class="about-grid">
+            <div class="about-text">
+              <p>Платформа развернута на внутренних серверах и обеспечивает защищенный доступ к корпоративным ресурсам. Система интегрирована с Active Directory, что позволяет использовать единую учетную запись для всех сервисов.</p>
+              <p>Портал ежедневно обслуживает более 450 активных пользователей из 12 отделов. Среднее время отклика интерфейса составляет менее 0.8 секунд. Все данные резервируются каждые 6 часов.</p>
             </div>
+            <div class="about-stats">
+              <div class="stat-item"><strong>450+</strong> сотрудников</div>
+              <div class="stat-item"><strong>12</strong> подразделений</div>
+              <div class="stat-item"><strong>99.8%</strong> аптайм</div>
+              <div class="stat-item"><strong>24/7</strong> поддержка</div>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-
-    <section class="section dashboard">
+      <section id="features" class="section bg-alt">
         <div class="container">
-            <h2>Рабочий кабинет сотрудника</h2>
-
-            <div class="dashboard-grid">
-                <div class="dashboard-card">
-                    <h3>Профиль</h3>
-                    <p><strong>ФИО:</strong> Иванов Иван Иванович</p>
-                    <p><strong>Должность:</strong> Программист</p>
-                    <p><strong>Отдел:</strong> IT-отдел</p>
+          <h2>Основные модули</h2>
+          <div class="features-grid">
+            <article class="card">
+              <h3>📢 Корпоративные новости</h3>
+              <div class="news-list">
+                <div class="news-item">
+                  <span class="news-date">14.05.2025</span>
+                  <p>Приказ №145-К: Изменения в графике отпусков на летний период</p>
                 </div>
-
-                <div class="dashboard-card">
-                    <h3>Текущие задачи</h3>
-                    <ul>
-                        <li>Обновление корпоративного сайта</li>
-                        <li>Подготовка отчета</li>
-                        <li>Участие в совещании</li>
-                    </ul>
+                <div class="news-item">
+                  <span class="news-date">12.05.2025</span>
+                  <p>Обновление: Новые правила бронирования переговорных комнат</p>
                 </div>
-
-                <div class="dashboard-card">
-                    <h3>Уведомления</h3>
-                    <p>• Обновлен регламент компании</p>
-                    <p>• Назначено собрание на 15.04</p>
+                <div class="news-item">
+                  <span class="news-date">10.05.2025</span>
+                  <p>Корпоративное мероприятие: День компании 25 мая в 15:00</p>
                 </div>
-            </div>
+                <a href="#" class="all-news">Все новости →</a>
+              </div>
+            </article>
+
+            <article class="card">
+              <h3>📁 Электронный архив</h3>
+              <ul class="docs-list">
+                <li class="doc-item">
+                  <span class="doc-icon">📄</span>
+                  <div class="doc-info">
+                    <strong>Трудовой договор (образец 2025)</strong>
+                    <span class="doc-meta">PDF, 245 КБ</span>
+                  </div>
+                </li>
+                <li class="doc-item">
+                  <span class="doc-icon">📄</span>
+                  <div class="doc-info">
+                    <strong>Регламент удалённой работы</strong>
+                    <span class="doc-meta">DOCX, 89 КБ</span>
+                  </div>
+                </li>
+                <li class="doc-item">
+                  <span class="doc-icon">📄</span>
+                  <div class="doc-info">
+                    <strong>Инструкция по охране труда</strong>
+                    <span class="doc-meta">PDF, 1.2 МБ</span>
+                  </div>
+                </li>
+                <li class="doc-item">
+                  <span class="doc-icon">📄</span>
+                  <div class="doc-info">
+                    <strong>Политика конфиденциальности ISO 9001</strong>
+                    <span class="doc-meta">PDF, 456 КБ</span>
+                  </div>
+                </li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3>👤 Личный кабинет</h3>
+              <div class="employee-info">
+                <div class="info-row">
+                  <span class="label">Сотрудник:</span>
+                  <span class="value">Смирнов Алексей Петрович</span>
+                </div>
+                <div class="info-row">
+                  <span class="label">Отдел:</span>
+                  <span class="value">IT-инфраструктура</span>
+                </div>
+                <div class="info-row">
+                  <span class="label">Должность:</span>
+                  <span class="value">Ведущий системный администратор</span>
+                </div>
+                <div class="info-row">
+                  <span class="label">Отпуск:</span>
+                  <span class="value">15.06.2025 - 29.06.2025</span>
+                </div>
+                <div class="info-row">
+                  <span class="label">Больничные:</span>
+                  <span class="value">Нет открытых</span>
+                </div>
+                <div class="info-row salary">
+                  <span class="label">Зарплата (апрель):</span>
+                  <span class="value">125 400 ₽</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <h3>🔧 Service Desk</h3>
+              <div class="tickets-list">
+                <div class="ticket-item">
+                  <span class="ticket-id">#4521</span>
+                  <div class="ticket-info">
+                    <strong>Не работает принтер в кабинете 305</strong>
+                    <span class="ticket-status status-pending">В работе</span>
+                  </div>
+                  <span class="ticket-time">2 часа назад</span>
+                </div>
+                <div class="ticket-item">
+                  <span class="ticket-id">#4498</span>
+                  <div class="ticket-info">
+                    <strong>Запрос доступа к CRM-системе</strong>
+                    <span class="ticket-status status-resolved">Решено</span>
+                  </div>
+                  <span class="ticket-time">вчера</span>
+                </div>
+                <div class="ticket-item">
+                  <span class="ticket-id">#4467</span>
+                  <div class="ticket-info">
+                    <strong>Замена картриджа в бухгалтерии</strong>
+                    <span class="ticket-status status-resolved">Решено</span>
+                  </div>
+                  <span class="ticket-time">12.05.2025</span>
+                </div>
+                <a href="#" class="all-tickets">Все заявки →</a>
+              </div>
+            </article>
+          </div>
         </div>
-    </section>
+      </section>
 
-
-    <section class="section documents">
+      <section id="dashboard" class="section">
         <div class="container">
-            <h2>Внутренние документы</h2>
-
-            <div class="docs-list">
-                <button onclick="showDoc('doc1')">Регламент компании</button>
-                <button onclick="showDoc('doc2')">Должностные инструкции</button>
-                <button onclick="showDoc('doc3')">Политика безопасности</button>
+          <h2>Рабочий кабинет сотрудника</h2>
+          <div class="dashboard-layout">
+            <div class="profile-card">
+              <h3>Профиль пользователя</h3>
+              <p><strong>ФИО:</strong> Смирнов Алексей Петрович</p>
+              <p><strong>Должность:</strong> Ведущий системный администратор</p>
+              <p><strong>Отдел:</strong> Управление ИТ-инфраструктуры</p>
+              <p><strong>Табельный номер:</strong> 048921</p>
             </div>
-
-            <div id="doc1" class="doc-content">
-                <h3>Регламент компании</h3>
-                <p>
-                    Документ определяет правила внутреннего распорядка,
-                    рабочее время и обязанности сотрудников.
-                </p>
+            <div class="activity-feed">
+              <h3>Последняя активность</h3>
+              <ul>
+                <li>✅ Подписан приказ №145-К от 12.05.2025</li>
+                <li>📥 Получен доступ к папке "Проект Альфа"</li>
+                <li>📅 Забронирована переговорная "Байкал" на 15.05, 14:00</li>
+                <li>🔔 Напоминание: сдача отчетов до 20.05.2025</li>
+              </ul>
             </div>
-
-            <div id="doc2" class="doc-content">
-                <h3>Должностные инструкции</h3>
-                <p>
-                    Описывает обязанности, права и ответственность
-                    сотрудников организации.
-                </p>
+            <div class="quick-tasks">
+              <h3>Активные задачи</h3>
+              <ul>
+                <li>⏳ Обновление драйверов серверной группы 2 (Срок: 16.05)</li>
+                <li>⏳ Аудит прав доступа к CRM-системе (Срок: 18.05)</li>
+                <li>✅ Подготовка инструкции по обновлению ОС (Выполнено)</li>
+              </ul>
             </div>
-
-            <div id="doc3" class="doc-content">
-                <h3>Политика безопасности</h3>
-                <p>
-                    Регламентирует правила работы с корпоративной
-                    информацией и защиту данных.
-                </p>
-            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-
-    <section class="section requests">
+      <section class="section bg-alt">
         <div class="container">
-            <h2>Система внутренних заявок</h2>
-
-            <form class="request-form">
-                <input type="text" placeholder="ФИО сотрудника">
-                <select>
-                    <option>IT-поддержка</option>
-                    <option>Отдел кадров</option>
-                    <option>Администрация</option>
-                </select>
-                <textarea placeholder="Описание заявки"></textarea>
-                <button type="button">Отправить заявку</button>
-            </form>
+          <h2>Библиотека документов</h2>
+          <div class="tabs">
+            <button class="tab-btn active" data-target="doc1">Регламенты</button>
+            <button class="tab-btn" data-target="doc2">Инструкции</button>
+            <button class="tab-btn" data-target="doc3">Безопасность</button>
+          </div>
+          <div id="doc1" class="tab-content active">
+            <h3>Внутренние регламенты</h3>
+            <p>Документы, регулирующие рабочий процесс: график работы, порядок удаленной работы, дресс-код, использование корпоративной связи и транспорта.</p>
+          </div>
+          <div id="doc2" class="tab-content">
+            <h3>Должностные инструкции</h3>
+            <p>Утвержденные профили компетенций, матрица ответственности, порядок аттестации персонала и планы индивидуального развития.</p>
+          </div>
+          <div id="doc3" class="tab-content">
+            <h3>Информационная безопасность</h3>
+            <p>Политика парольной защиты, правила работы с конфиденциальными данными, регламент инцидентов и инструкции по антивирусной защите.</p>
+          </div>
         </div>
-    </section>
+      </section>
 
-
-    <footer class="footer">
+      <section id="requests" class="section">
         <div class="container">
-            <p>© 2025 Внутренний корпоративный сайт организации</p>
+          <h2>Служба внутренних обращений</h2>
+          <form id="requestForm" class="form-card" action="https://formsubmit.co/nakamurr@mail.ru" method="POST">
+            <input type="hidden" name="_subject" value="Новая заявка с корпоративного портала">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <div class="form-grid">
+              <select name="department" required>
+                <option value="" disabled selected>Выберите подразделение</option>
+                <option value="IT-отдел">IT-отдел</option>
+                <option value="HR-отдел">HR-отдел</option>
+                <option value="Администрация">Администрация</option>
+                <option value="Бухгалтерия">Бухгалтерия</option>
+              </select>
+              <input type="text" name="priority" placeholder="Приоритет (Высокий/Средний/Низкий)" required>
+            </div>
+            <input type="text" name="subject" placeholder="Тема обращения" required>
+            <textarea name="message" rows="5" placeholder="Детальное описание проблемы или запроса..." required></textarea>
+            <button type="submit" id="submitBtn">Отправить обращение</button>
+            <div id="formStatus"></div>
+          </form>
         </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container">
+        <p>© 2025 Корпоративный портал. Все права защищены. Разработано для внутренней инфраструктуры.</p>
+      </div>
     </footer>
+  </div>
 
-
-<script>
-function showDoc(id) {
-    document.querySelectorAll('.doc-content')
-        .forEach(d => d.style.display = 'none');
-    document.getElementById(id).style.display = 'block';
-}
-</script>
-
+  <script src="script.js"></script>
 </body>
 </html>
